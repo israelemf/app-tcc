@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
 
-class Birth extends Component {
+class Target extends Component {
 
     render() {
         return (
@@ -10,17 +10,16 @@ class Birth extends Component {
             <View style={styles.container} >
                 <Text style={{
                     fontSize: 20,
-                    color: 'white'
-                }}>Qual sua data de nascimento?</Text>
+                    color: 'white',
+                }}>Ótimo! Agora selecione o seu objetivo</Text>
                 <View style={{
                     flexDirection: 'row',
                     alignItems: 'center',
                     padding: 20
                 }}>
-                    <Text style={{ color: 'white', fontSize: 20 }}> Falta implementar o DatePicker</Text>
+                    <Text style={{ color: 'white', fontSize: 20 }}> Falta implementar a opção Ganho de peso, manter peso e perder peso.</Text>
                 </View>
-
-                <TouchableOpacity style={styles.icon} onPress={() => this.props.navigation.navigate('Target')}>
+                <TouchableOpacity style={styles.icon} onPress={() => this.props.navigation.navigate('Activity')}>
                     <Icon name='arrow-forward' color={'white'} size={28} />
                 </TouchableOpacity>
             </View>
@@ -28,6 +27,7 @@ class Birth extends Component {
         );
     }
 }
+
 
 const styles = StyleSheet.create({
 
@@ -63,4 +63,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Birth;
+export default Target;

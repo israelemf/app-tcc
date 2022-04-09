@@ -1,30 +1,68 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { View, StyleSheet } from 'react-native';
 
-import Feed from '../../pages/mainPage/feed';
+import Icon from 'react-native-vector-icons/Ionicons';
+import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
+import Profile from '../../pages/mainPage/profile';
+import Training from '../../pages/mainPage/training';
+import Index from '../../pages/mainPage';
+import Feeding from '../../pages/mainPage/feeding';
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
     return (
+            <Tab.Navigator
+                initialRouteName="Feeding"
+                screenOptions={{
+                    tabBarLabel: 'Home',
+                    tabBarActiveBackgroundColor: '#DCDCDC',
+                    tabBarStyle: {
+                        backgroundColor: '#1C1C1C',
 
-        <Tab.Navigator
-            initialRouteName="Feed"
-            screenOptions={{
-                tabBarActiveTintColor: '#e91e63',
-                tabBarLabel: 'Home',
-                tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="home" color={color} size={size} />
-                ),
-            }}>
-            <Tab.Screen name="Feed" component={Feed}
-                options={{
-                    title: '',
-                    headerStyle: { backgroundColor: '#1C1C1C' },
-                    headerTintColor: 'white'
-                }}
-            />
-        </Tab.Navigator>
+                    },
+                }}>
+
+                <Tab.Screen name="Feeding" component={Feeding}
+                    options={{
+                        headerShown: false,
+                        tabBarLabel: 'Alimentação',
+                        tabBarIcon: ({ color }) => (
+                            <Icon2 name="silverware-fork-knife" color={color} size={20} />
+                        ),
+                    }}
+                />
+
+                <Tab.Screen name="Training" component={Training}
+                    options={{
+                        headerShown: false,
+                        tabBarLabel: 'Treino',
+                        tabBarIcon: ({ color }) => (
+                            <Icon name="barbell-outline" color={color} size={20} />
+                        ),
+                    }}
+                />
+
+                <Tab.Screen name="Index" component={Index}
+                    options={{
+                        headerShown: false,
+                        tabBarLabel: 'Indíce',
+                        tabBarIcon: ({ color }) => (
+                            <Icon name="newspaper-outline" color={color} size={20} />
+                        ),
+                    }}
+                />
+
+                <Tab.Screen name="Profile" component={Profile}
+                    options={{
+                        headerShown: false,
+                        tabBarLabel: 'Perfil',
+                        tabBarIcon: ({ color }) => (
+                            <Icon name="person-outline" color={color} size={20} />
+                        ),
+                    }}
+                />
+            </Tab.Navigator>
     );
 }
 

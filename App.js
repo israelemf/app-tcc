@@ -6,8 +6,8 @@ import Gender from './src/pages/firstAccess/gender';
 import Weight from './src/pages/firstAccess/weight';
 import Height from './src/pages/firstAccess/height';
 import Birth from './src/pages/firstAccess/birth';
-import Object from './src/pages/firstAccess/object';
-import Feed from './src/pages/mainPage/feed';
+import Target from './src/pages/firstAccess/target';
+import Activity from './src/pages/firstAccess/activity';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MyTabs from './src/components/bottomNavigator';
@@ -31,7 +31,7 @@ class App extends Component {
           <Stack.Screen name="Login" component={Login}
             options={{
               title: '',
-              headerStyle: { backgroundColor: '#000000' },
+              headerStyle: { backgroundColor: '#1C1C1C' },
               headerTintColor: 'white'
 
             }}
@@ -77,7 +77,15 @@ class App extends Component {
             }}
           />
 
-          <Stack.Screen name="Object" component={Object}
+          <Stack.Screen name="Target" component={Target}
+            options={{
+              title: '',
+              headerStyle: { backgroundColor: '#1C1C1C' },
+              headerTintColor: 'white'
+            }}
+          />
+
+          <Stack.Screen name="Activity" component={Activity}
             options={{
               title: '',
               headerStyle: { backgroundColor: '#1C1C1C' },
@@ -87,7 +95,9 @@ class App extends Component {
 
           <Stack.Screen name="MyTabs" component={MyTabs}
             options={{
-              headerShown: false
+              title: '',
+              headerStyle: { backgroundColor: '#1C1C1C' },
+              headerTintColor: 'white',
             }}
           />
 

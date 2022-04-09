@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, StyleSheet, StatusBar, Text, TouchableOpacity, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
-function Feed() {
+function Index() {
 
     return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}
             accessible={false}>
             <View style={styles.container}>
-                <Text>Teste</Text>
+
             </View>
         </TouchableWithoutFeedback>
     );
@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Feed;
+export default Index;

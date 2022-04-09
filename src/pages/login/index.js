@@ -16,7 +16,7 @@ class Login extends Component {
                             <Text style={styles.text1}>RotinadaFit</Text>
                         </View>
                         <InputLogin />
-                        <TouchableOpacity style={styles.btn} onPress={() => this.props.navigation.navigate('MyTabs')}>
+                        <TouchableOpacity style={styles.btn} onPress={() => this.props.navigation.navigate('Gender')}>
                             <Text style={{
                                 fontSize: 16,
                                 fontWeight: 'bold',
@@ -42,7 +42,7 @@ class Login extends Component {
 const styles = StyleSheet.create({
 
     container: {
-        backgroundColor: '#000000',
+        backgroundColor: '#1C1C1C',
         height: '100%',
         width: '100%',
         justifyContent: 'space-between'
